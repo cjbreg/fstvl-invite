@@ -50,7 +50,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         videoNode.geometry?.setValue(CGFloat(referenceImage.physicalSize.height) * 1.2 , forKey: "height")
         
         videoNode.geometry?.firstMaterial?.isDoubleSided = true
-//        videoNode.position = SCNVector3(referenceImage.center.x, referenceImage.center.y, referenceImage.center.z)
+        //        videoNode.position = SCNVector3(referenceImage.center.x, referenceImage.center.y, referenceImage.center.z)
         
         videoNode.eulerAngles.x = -.pi / 2
         
@@ -63,17 +63,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         print("New surface detected")
         
-        // Video
-        let videoURL = Bundle.main.url(forResource: "slamstoxAnimation", withExtension: "mp4")!
-        player = AVPlayer(url: videoURL)
-        videoNode.geometry?.firstMaterial?.diffuse.contents = player
-        player!.play()
-        
-        
         if (player?.timeControlStatus == AVPlayer.TimeControlStatus.playing) {
             print("playing, so not creating a new node")
             
         } else {
+            // Video
+            let videoURL = Bundle.main.url(forResource: "slamstoxAnimation", withExtension: "mp4")!
+            player = AVPlayer(url: videoURL)
+            videoNode.geometry?.firstMaterial?.diffuse.contents = player
+            player!.play()
+            
             // ... we proceed creating and adding the scene node
             let childNode = createNode(imageAnchor: imageAnchor)
             node.addChildNode(childNode)
