@@ -84,6 +84,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         let referenceImage = imageAnchor.referenceImage
+        
+        // Container
+        guard let container sceneView.scene.rootNode.childNode(withName: "container", recursively: false) else {return}
+        container.removeFromParentNode()
+        node.addChildNode(container)
+        container.isHidden = false
+        
+        // Video
+        
+        
         updateQueue.async {
             
             // Create a plane to visualize the initial position of the detected image.
