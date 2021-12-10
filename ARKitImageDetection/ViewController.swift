@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-Main view controller for the AR experience.
-*/
+ See LICENSE folder for this sample’s licensing information.
+ 
+ Abstract:
+ Main view controller for the AR experience.
+ */
 
 import ARKit
 import SceneKit
@@ -13,141 +13,95 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
-    @IBOutlet weak var blurView: UIVisualEffectView!
+    var player : AVPlayer?
     
-    /// The view controller that displays the status and "restart experience" UI.
-    lazy var statusViewController: StatusViewController = {
-        return children.lazy.compactMap({ $0 as? StatusViewController }).first!
-    }()
+    let configuration = ARWorldTrackingConfiguration()
     
-    /// A serial queue for thread safety when modifying the SceneKit node graph.
-    let updateQueue = DispatchQueue(label: Bundle.main.bundleIdentifier! +
-        ".serialSceneKitQueue")
-    
-    /// Convenience accessor for the session owned by ARSCNView.
-    var session: ARSession {
-        return sceneView.session
-    }
-    
-    // MARK: - View Controller Life Cycle
+    let videoNode = SCNNode(geometry: SCNPlane())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // set delegate so renderer fn gets called
         sceneView.delegate = self
-        sceneView.session.delegate = self
-
-        // Hook up status view controller callback(s).
-        statusViewController.restartExperienceHandler = { [unowned self] in
-            self.restartExperience()
-        }
+        // type of plane detection
+        configuration.planeDetection = .vertical
+        // run, requests camera access first run
+        sceneView.session.run(configuration)
     }
-
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		
-		// Prevent the screen from being dimmed to avoid interuppting the AR experience.
-		UIApplication.shared.isIdleTimerDisabled = true
-
-        // Start the AR experience
-        resetTracking()
-	}
-	
-	override func viewWillDisappear(_ animated: Bool) {
-		super.viewWillDisappear(animated)
-
-        session.pause()
-	}
-
-    // MARK: - Session management (Image detection setup)
     
-    /// Prevents restarting the session while a restart is in progress.
-    var isRestartAvailable = true
-
-    /// Creates a new AR configuration to run on the `session`.
-    /// - Tag: ARReferenceImage-Loading
-	func resetTracking() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
-            fatalError("Missing expected asset catalog resources.")
-        }
+        print("Okaay, let's gooo")
+    }
+    
+    func createNode(planeAnchor: ARPlaneAnchor) -> SCNNode {
+        // set width & height
+        videoNode.geometry?.setValue(CGFloat(planeAnchor.extent.x) / 2, forKey: "width")
+        videoNode.geometry?.setValue(CGFloat(planeAnchor.extent.z) / 2 , forKey: "height")
         
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.detectionImages = referenceImages
-        session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-
-        statusViewController.scheduleMessage("Look around to detect images", inSeconds: 7.5, messageType: .contentPlacement)
-	}
-
-    // MARK: - ARSCNViewDelegate (Image detection results)
-    /// - Tag: ARImageAnchor-Visualizing
+        videoNode.geometry?.firstMaterial?.isDoubleSided = true
+        videoNode.position = SCNVector3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
+        
+        // rotate 90 degrees about x axis <--x-->
+        videoNode.eulerAngles.x = -.pi / 2
+        return videoNode
+    }
+    
+    // This delegate fires when an anchor is added whenever an ARAnchor was added to the sceneview. An anchor encodes position, size and orientation of something ... the surface in this case.
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard let imageAnchor = anchor as? ARImageAnchor else { return }
-        let referenceImage = imageAnchor.referenceImage
-        
-        // Container
-        guard let container = sceneView.scene.rootNode.childNode(withName: "container", recursively: false) else { return}
-        container.removeFromParentNode()
-        node.addChildNode(container)
-        container.isHidden = false
+        guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
+        print("New surface detected")
         
         // Video
         let videoURL = Bundle.main.url(forResource: "slamstoxAnimation", withExtension: "mp4")!
-        let videoPlayer = AVPlayer(url: videoURL)
+        player = AVPlayer(url: videoURL)
+        videoNode.geometry?.firstMaterial?.diffuse.contents = player
+        player!.play()
         
-        let videoScene = SKScene(size: CGSize(width: 1280.0, height: 720.0))
         
-        let videoNode = SKVideoNode(avPlayer: videoPlayer)
-        videoNode.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
-        videoNode.size = videoScene.size
-        videoNode.yScale = -1
-        videoNode.play()
-        
-        videoScene.addChild(videoNode)
-        
-        guard let video = container.childNode(withName: "slamstoxAnimation", recursively: true) else {return}
-        video.geometry?.firstMaterial?.diffuse.contents = videoScene
-        
-        updateQueue.async {
+        if (player?.timeControlStatus == AVPlayer.TimeControlStatus.playing) {
+            print("playing, so not creating a new node")
             
-            // Create a plane to visualize the initial position of the detected image.
-            let plane = SCNPlane(width: referenceImage.physicalSize.width,
-                                 height: referenceImage.physicalSize.height)
-            let planeNode = SCNNode(geometry: plane)
-            planeNode.opacity = 0.25
-            
-            /*
-             `SCNPlane` is vertically oriented in its local coordinate space, but
-             `ARImageAnchor` assumes the image is horizontal in its local space, so
-             rotate the plane to match.
-             */
-            planeNode.eulerAngles.x = -.pi / 2
-            
-            /*
-             Image anchors are not tracked after initial detection, so create an
-             animation that limits the duration for which the plane visualization appears.
-             */
-            planeNode.runAction(self.imageHighlightAction)
-            
-            // Add the plane visualization to the scene.
-            node.addChildNode(planeNode)
-        }
-
-        DispatchQueue.main.async {
-            let imageName = referenceImage.name ?? ""
-            self.statusViewController.cancelAllScheduledMessages()
-            self.statusViewController.showMessage("Detected image “\(imageName)”")
+        } else {
+            // ... we proceed creating and adding the scene node
+            let childNode = createNode(planeAnchor: planeAnchor)
+            node.addChildNode(childNode)
         }
     }
-
-    var imageHighlightAction: SCNAction {
-        return .sequence([
-            .wait(duration: 0.25),
-            .fadeOpacity(to: 0.85, duration: 0.25),
-            .fadeOpacity(to: 0.15, duration: 0.25),
-            .fadeOpacity(to: 0.85, duration: 0.25),
-            .fadeOut(duration: 0.5),
-            .removeFromParentNode()
-        ])
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
+        print("Surface updated")
+        
+        if (player?.timeControlStatus == AVPlayer.TimeControlStatus.playing) {
+            
+            print("playing, so not updating nodes")
+            
+        } else {
+            // remove all
+            node.enumerateChildNodes { (childNode, _) in
+                childNode.removeFromParentNode()
+            }
+            // add back
+            let childNode = createNode(planeAnchor: planeAnchor )
+            node.addChildNode(childNode)
+        }
     }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
+        print("Surface anchor removed")
+        // pause player
+        player!.pause()
+        
+        // remove all
+        node.enumerateChildNodes { (childNode, _) in
+            childNode.removeFromParentNode()
+        }
+    }
+}
+
+extension Int {
+    var degreesToRadians: Double { return Double(self) * .pi/180 }
 }
