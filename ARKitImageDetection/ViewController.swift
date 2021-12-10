@@ -25,8 +25,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // set delegate so renderer fn gets called
         sceneView.delegate = self
-        // type of plane detection
-        configuration.planeDetection = .vertical
         
         guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
             fatalError("Missing expected asset catalog resources.")
@@ -40,8 +38,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        print("Okaay, let's gooo")
     }
     
     func createNode(imageAnchor: ARImageAnchor) -> SCNNode {
@@ -50,8 +46,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let referenceImage = imageAnchor.referenceImage
         
         // set width & height
-        videoNode.geometry?.setValue(CGFloat(referenceImage.physicalSize.width), forKey: "width")  //Play around to get correct size
-        videoNode.geometry?.setValue(CGFloat(referenceImage.physicalSize.height) , forKey: "height") //Play around to get correct size
+        videoNode.geometry?.setValue(CGFloat(referenceImage.physicalSize.width) * 1.2, forKey: "width")
+        videoNode.geometry?.setValue(CGFloat(referenceImage.physicalSize.height) * 1.2 , forKey: "height")
         
         videoNode.geometry?.firstMaterial?.isDoubleSided = true
 //        videoNode.position = SCNVector3(referenceImage.center.x, referenceImage.center.y, referenceImage.center.z)
@@ -63,9 +59,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         return videoNode
     }
     
-    // This delegate fires when an anchor is added whenever an ARAnchor was added to the sceneview. An anchor encodes position, size and orientation of something ... the surface in this case.
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-//        guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         print("New surface detected")
         
@@ -85,25 +79,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.addChildNode(childNode)
         }
     }
-    
-//    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-//        guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
-//        print("Surface updated")
-//
-//        if (player?.timeControlStatus == AVPlayer.TimeControlStatus.playing) {
-//
-//            print("playing, so not updating nodes")
-//
-//        } else {
-//            // remove all
-//            node.enumerateChildNodes { (childNode, _) in
-//                childNode.removeFromParentNode()
-//            }
-//            // add back
-//            let childNode = createNode(planeAnchor: planeAnchor )
-//            node.addChildNode(childNode)
-//        }
-//    }
     
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
         print("Surface anchor removed")
