@@ -9,3 +9,14 @@ FSTVL Invite is an Augmented Reality appliction for iOS to function as an online
 		<img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-gb/appstore-lrg.svg"/>
 	</a>
 </p>
+
+## About FSTVL Invite
+
+FSTVL Invite has been made for you to access your invite for the festival, hosted by Slamstox
+
+wallabag is a creation from Coen Breg & Kim Vermeulen released under the MIT License (Expat License).
+
+## Background
+
+This is a self-learning project.
+We are discovering Swift, the apple ecosystem and ARKit
