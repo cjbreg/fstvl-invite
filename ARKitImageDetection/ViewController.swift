@@ -86,13 +86,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let referenceImage = imageAnchor.referenceImage
         
         // Container
-        guard let container sceneView.scene.rootNode.childNode(withName: "container", recursively: false) else {return}
+        guard let container = sceneView.scene.rootNode.childNode(withName: "container", recursively: false) else { return}
         container.removeFromParentNode()
         node.addChildNode(container)
         container.isHidden = false
         
         // Video
+        let videoURL = Bundle.main.url(forResource: "slamstoxAnimation", withExtension: "mp4")!
+        let videoPlayer = AVPlayer(url: videoURL)
         
+        let videoScene = SKScene(size: CGSize(width: 1280.0, height: 720.0))
+        
+        let videoNode = SKVideoNode(avPlayer: videoPlayer)
+        videoNode.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
+        videoNode.size = videoScene.size
+        videoNode.yScale = -1
+        videoNode.play()
+        
+        videoScene.addChild(videoNode)
+        
+        guard let video = container.childNode(withName: "slamstoxAnimation", recursively: true) else {return}
+        video.geometry?.firstMaterial?.diffuse.contents = videoScene
         
         updateQueue.async {
             
