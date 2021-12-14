@@ -13,9 +13,6 @@
 		14B73589276892D5007A7E73 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 14B73588276892D5007A7E73 /* Experience.rcproject */; };
 		14B7358B276892D7007A7E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B7358A276892D7007A7E73 /* Assets.xcassets */; };
 		14B7358E276892D7007A7E73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B7358D276892D7007A7E73 /* Preview Assets.xcassets */; };
-		14B73598276892D7007A7E73 /* IosWorkshopArTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B73597276892D7007A7E73 /* IosWorkshopArTests.swift */; };
-		14B735A2276892D7007A7E73 /* IosWorkshopArUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B735A1276892D7007A7E73 /* IosWorkshopArUITests.swift */; };
-		14B735A4276892D7007A7E73 /* IosWorkshopArUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B735A3276892D7007A7E73 /* IosWorkshopArUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,17 +34,14 @@
 
 /* Begin PBXFileReference section */
 		143E0BD22768CA6D00EB390B /* slamstoxAnimation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = slamstoxAnimation.mp4; path = "../../../FreakyFriday/fstvl-invite/assets/videos/slamstoxAnimation.mp4"; sourceTree = "<group>"; };
-		14B73581276892D5007A7E73 /* IosWorkshopAr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosWorkshopAr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B73581276892D5007A7E73 /* fstvl invite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fstvl invite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B73584276892D5007A7E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14B73586276892D5007A7E73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14B73588276892D5007A7E73 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		14B7358A276892D7007A7E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B7358D276892D7007A7E73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		14B73593276892D7007A7E73 /* IosWorkshopArTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosWorkshopArTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14B73597276892D7007A7E73 /* IosWorkshopArTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosWorkshopArTests.swift; sourceTree = "<group>"; };
-		14B7359D276892D7007A7E73 /* IosWorkshopArUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosWorkshopArUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14B735A1276892D7007A7E73 /* IosWorkshopArUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosWorkshopArUITests.swift; sourceTree = "<group>"; };
-		14B735A3276892D7007A7E73 /* IosWorkshopArUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosWorkshopArUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		14B73593276892D7007A7E73 /* fstvlInviteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fstvlInviteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B7359D276892D7007A7E73 /* fstvlInviteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fstvlInviteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +72,7 @@
 		14B73578276892D5007A7E73 = {
 			isa = PBXGroup;
 			children = (
-				14B73583276892D5007A7E73 /* IosWorkshopAr */,
-				14B73596276892D7007A7E73 /* IosWorkshopArTests */,
-				14B735A0276892D7007A7E73 /* IosWorkshopArUITests */,
+				14B73583276892D5007A7E73 /* fstvlInvite */,
 				14B73582276892D5007A7E73 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,14 +80,14 @@
 		14B73582276892D5007A7E73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14B73581276892D5007A7E73 /* IosWorkshopAr.app */,
-				14B73593276892D7007A7E73 /* IosWorkshopArTests.xctest */,
-				14B7359D276892D7007A7E73 /* IosWorkshopArUITests.xctest */,
+				14B73581276892D5007A7E73 /* fstvl invite.app */,
+				14B73593276892D7007A7E73 /* fstvlInviteTests.xctest */,
+				14B7359D276892D7007A7E73 /* fstvlInviteUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14B73583276892D5007A7E73 /* IosWorkshopAr */ = {
+		14B73583276892D5007A7E73 /* fstvlInvite */ = {
 			isa = PBXGroup;
 			children = (
 				143E0BD22768CA6D00EB390B /* slamstoxAnimation.mp4 */,
@@ -105,7 +97,7 @@
 				14B7358A276892D7007A7E73 /* Assets.xcassets */,
 				14B7358C276892D7007A7E73 /* Preview Content */,
 			);
-			path = IosWorkshopAr;
+			path = fstvlInvite;
 			sourceTree = "<group>";
 		};
 		14B7358C276892D7007A7E73 /* Preview Content */ = {
@@ -116,29 +108,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		14B73596276892D7007A7E73 /* IosWorkshopArTests */ = {
-			isa = PBXGroup;
-			children = (
-				14B73597276892D7007A7E73 /* IosWorkshopArTests.swift */,
-			);
-			path = IosWorkshopArTests;
-			sourceTree = "<group>";
-		};
-		14B735A0276892D7007A7E73 /* IosWorkshopArUITests */ = {
-			isa = PBXGroup;
-			children = (
-				14B735A1276892D7007A7E73 /* IosWorkshopArUITests.swift */,
-				14B735A3276892D7007A7E73 /* IosWorkshopArUITestsLaunchTests.swift */,
-			);
-			path = IosWorkshopArUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14B73580276892D5007A7E73 /* IosWorkshopAr */ = {
+		14B73580276892D5007A7E73 /* fstvlInvite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14B735A7276892D7007A7E73 /* Build configuration list for PBXNativeTarget "IosWorkshopAr" */;
+			buildConfigurationList = 14B735A7276892D7007A7E73 /* Build configuration list for PBXNativeTarget "fstvlInvite" */;
 			buildPhases = (
 				14B7357D276892D5007A7E73 /* Sources */,
 				14B7357E276892D5007A7E73 /* Frameworks */,
@@ -148,14 +123,14 @@
 			);
 			dependencies = (
 			);
-			name = IosWorkshopAr;
+			name = fstvlInvite;
 			productName = IosWorkshopAr;
-			productReference = 14B73581276892D5007A7E73 /* IosWorkshopAr.app */;
+			productReference = 14B73581276892D5007A7E73 /* fstvl invite.app */;
 			productType = "com.apple.product-type.application";
 		};
-		14B73592276892D7007A7E73 /* IosWorkshopArTests */ = {
+		14B73592276892D7007A7E73 /* fstvlInviteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14B735AA276892D7007A7E73 /* Build configuration list for PBXNativeTarget "IosWorkshopArTests" */;
+			buildConfigurationList = 14B735AA276892D7007A7E73 /* Build configuration list for PBXNativeTarget "fstvlInviteTests" */;
 			buildPhases = (
 				14B7358F276892D7007A7E73 /* Sources */,
 				14B73590276892D7007A7E73 /* Frameworks */,
@@ -166,14 +141,14 @@
 			dependencies = (
 				14B73595276892D7007A7E73 /* PBXTargetDependency */,
 			);
-			name = IosWorkshopArTests;
+			name = fstvlInviteTests;
 			productName = IosWorkshopArTests;
-			productReference = 14B73593276892D7007A7E73 /* IosWorkshopArTests.xctest */;
+			productReference = 14B73593276892D7007A7E73 /* fstvlInviteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		14B7359C276892D7007A7E73 /* IosWorkshopArUITests */ = {
+		14B7359C276892D7007A7E73 /* fstvlInviteUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14B735AD276892D7007A7E73 /* Build configuration list for PBXNativeTarget "IosWorkshopArUITests" */;
+			buildConfigurationList = 14B735AD276892D7007A7E73 /* Build configuration list for PBXNativeTarget "fstvlInviteUITests" */;
 			buildPhases = (
 				14B73599276892D7007A7E73 /* Sources */,
 				14B7359A276892D7007A7E73 /* Frameworks */,
@@ -184,9 +159,9 @@
 			dependencies = (
 				14B7359F276892D7007A7E73 /* PBXTargetDependency */,
 			);
-			name = IosWorkshopArUITests;
+			name = fstvlInviteUITests;
 			productName = IosWorkshopArUITests;
-			productReference = 14B7359D276892D7007A7E73 /* IosWorkshopArUITests.xctest */;
+			productReference = 14B7359D276892D7007A7E73 /* fstvlInviteUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -208,11 +183,10 @@
 					};
 					14B7359C276892D7007A7E73 = {
 						CreatedOnToolsVersion = 13.2;
-						TestTargetID = 14B73580276892D5007A7E73;
 					};
 				};
 			};
-			buildConfigurationList = 14B7357C276892D5007A7E73 /* Build configuration list for PBXProject "IosWorkshopAr" */;
+			buildConfigurationList = 14B7357C276892D5007A7E73 /* Build configuration list for PBXProject "fstvlInvite" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -225,9 +199,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14B73580276892D5007A7E73 /* IosWorkshopAr */,
-				14B73592276892D7007A7E73 /* IosWorkshopArTests */,
-				14B7359C276892D7007A7E73 /* IosWorkshopArUITests */,
+				14B73580276892D5007A7E73 /* fstvlInvite */,
+				14B73592276892D7007A7E73 /* fstvlInviteTests */,
+				14B7359C276892D7007A7E73 /* fstvlInviteUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B73598276892D7007A7E73 /* IosWorkshopArTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B735A4276892D7007A7E73 /* IosWorkshopArUITestsLaunchTests.swift in Sources */,
-				14B735A2276892D7007A7E73 /* IosWorkshopArUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,12 +263,12 @@
 /* Begin PBXTargetDependency section */
 		14B73595276892D7007A7E73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14B73580276892D5007A7E73 /* IosWorkshopAr */;
+			target = 14B73580276892D5007A7E73 /* fstvlInvite */;
 			targetProxy = 14B73594276892D7007A7E73 /* PBXContainerItemProxy */;
 		};
 		14B7359F276892D7007A7E73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14B73580276892D5007A7E73 /* IosWorkshopAr */;
+			target = 14B73580276892D5007A7E73 /* fstvlInvite */;
 			targetProxy = 14B7359E276892D7007A7E73 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -354,7 +325,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -409,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -426,7 +397,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"IosWorkshopAr/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"fstvlInvite/Preview Content\"";
 				DEVELOPMENT_TEAM = 42Q89H448D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -444,7 +415,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = coenbreg.IosWorkshopAr;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "fstvl invite";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -458,7 +429,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"IosWorkshopAr/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"fstvlInvite/Preview Content\"";
 				DEVELOPMENT_TEAM = 42Q89H448D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -476,7 +447,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = coenbreg.IosWorkshopAr;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "fstvl invite";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,7 +470,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IosWorkshopAr.app/IosWorkshopAr";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fstvlInvite.app/fstvlInvite";
 			};
 			name = Debug;
 		};
@@ -519,7 +490,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IosWorkshopAr.app/IosWorkshopAr";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fstvlInvite.app/fstvlInvite";
 			};
 			name = Release;
 		};
@@ -534,10 +505,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = coenbreg.IosWorkshopArUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = IosWorkshopAr;
 			};
 			name = Debug;
 		};
@@ -552,17 +523,17 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = coenbreg.IosWorkshopArUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = IosWorkshopAr;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14B7357C276892D5007A7E73 /* Build configuration list for PBXProject "IosWorkshopAr" */ = {
+		14B7357C276892D5007A7E73 /* Build configuration list for PBXProject "fstvlInvite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14B735A5276892D7007A7E73 /* Debug */,
@@ -571,7 +542,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14B735A7276892D7007A7E73 /* Build configuration list for PBXNativeTarget "IosWorkshopAr" */ = {
+		14B735A7276892D7007A7E73 /* Build configuration list for PBXNativeTarget "fstvlInvite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14B735A8276892D7007A7E73 /* Debug */,
@@ -580,7 +551,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14B735AA276892D7007A7E73 /* Build configuration list for PBXNativeTarget "IosWorkshopArTests" */ = {
+		14B735AA276892D7007A7E73 /* Build configuration list for PBXNativeTarget "fstvlInviteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14B735AB276892D7007A7E73 /* Debug */,
@@ -589,7 +560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14B735AD276892D7007A7E73 /* Build configuration list for PBXNativeTarget "IosWorkshopArUITests" */ = {
+		14B735AD276892D7007A7E73 /* Build configuration list for PBXNativeTarget "fstvlInviteUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14B735AE276892D7007A7E73 /* Debug */,
