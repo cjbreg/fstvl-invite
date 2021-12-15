@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "WhatsApp Image 2021-12-14 at 10.35.33.jpeg",
+      "filename" : "Frame 31.png",
       "idiom" : "universal"
     }
   ],
@@ -10,6 +10,7 @@
     "version" : 1
   },
   "properties" : {
-    "width" : 12
+    "unit" : "centimeters",
+    "width" : 20
   }
 }
