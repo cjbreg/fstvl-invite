@@ -14,7 +14,7 @@ FSTVL Invite is an Augmented Reality appliction for iOS to function as an online
 
 FSTVL Invite has been made for you to access your invite for the festival, hosted by Slamstox
 
-FSTVL Invite is a creation from Coen Breg & Kim Vermeulen released under the MIT License (Expat License).
+FSTVL Invite is a creation from Coen Breg & Kim van der Meulen released under the MIT License (Expat License).
 
 ## Background
 
