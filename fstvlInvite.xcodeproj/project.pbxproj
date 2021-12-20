@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		143E0BD32768CA6D00EB390B /* slamstoxAnimation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 143E0BD22768CA6D00EB390B /* slamstoxAnimation.mp4 */; };
 		14B73585276892D5007A7E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B73584276892D5007A7E73 /* AppDelegate.swift */; };
 		14B73587276892D5007A7E73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B73586276892D5007A7E73 /* ContentView.swift */; };
-		14B73589276892D5007A7E73 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 14B73588276892D5007A7E73 /* Experience.rcproject */; };
 		14B7358B276892D7007A7E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B7358A276892D7007A7E73 /* Assets.xcassets */; };
 		14B7358E276892D7007A7E73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B7358D276892D7007A7E73 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -33,11 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		143E0BD22768CA6D00EB390B /* slamstoxAnimation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = slamstoxAnimation.mp4; path = "../../../FreakyFriday/fstvl-invite/assets/videos/slamstoxAnimation.mp4"; sourceTree = "<group>"; };
 		14B73581276892D5007A7E73 /* fstvl invite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fstvl invite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B73584276892D5007A7E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14B73586276892D5007A7E73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		14B73588276892D5007A7E73 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		14B7358A276892D7007A7E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B7358D276892D7007A7E73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14B73593276892D7007A7E73 /* fstvlInviteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fstvlInviteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,10 +86,8 @@
 		14B73583276892D5007A7E73 /* fstvlInvite */ = {
 			isa = PBXGroup;
 			children = (
-				143E0BD22768CA6D00EB390B /* slamstoxAnimation.mp4 */,
 				14B73584276892D5007A7E73 /* AppDelegate.swift */,
 				14B73586276892D5007A7E73 /* ContentView.swift */,
-				14B73588276892D5007A7E73 /* Experience.rcproject */,
 				14B7358A276892D7007A7E73 /* Assets.xcassets */,
 				14B7358C276892D7007A7E73 /* Preview Content */,
 			);
@@ -212,7 +206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B7358E276892D7007A7E73 /* Preview Assets.xcassets in Resources */,
-				143E0BD32768CA6D00EB390B /* slamstoxAnimation.mp4 in Resources */,
 				14B7358B276892D7007A7E73 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,7 +233,6 @@
 			files = (
 				14B73587276892D5007A7E73 /* ContentView.swift in Sources */,
 				14B73585276892D5007A7E73 /* AppDelegate.swift in Sources */,
-				14B73589276892D5007A7E73 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

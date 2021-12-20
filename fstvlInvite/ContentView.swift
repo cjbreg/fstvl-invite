@@ -77,9 +77,7 @@ struct ARViewContainer: UIViewRepresentable {
                     let width = Float(imageAnchor.referenceImage.physicalSize.width)
                     let height = Float(imageAnchor.referenceImage.physicalSize.height)
                     
-                    
-                    
-                    guard let videoUrl = Bundle.main.url(forResource: "slamstoxAnimation", withExtension: "mp4") else {
+                    guard let videoUrl = URL(string: "https://i399015.hera.fhict.nl/invite-video.mp4") else {
                         fatalError("Video not found")
                     }
                     
