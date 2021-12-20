@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14B73581276892D5007A7E73 /* fstvl invite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fstvl invite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B73581276892D5007A7E73 /* Slamstox AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slamstox AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B73584276892D5007A7E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14B73586276892D5007A7E73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14B7358A276892D7007A7E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		14B73582276892D5007A7E73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14B73581276892D5007A7E73 /* fstvl invite.app */,
+				14B73581276892D5007A7E73 /* Slamstox AR.app */,
 				14B73593276892D7007A7E73 /* fstvlInviteTests.xctest */,
 				14B7359D276892D7007A7E73 /* fstvlInviteUITests.xctest */,
 			);
@@ -119,7 +119,7 @@
 			);
 			name = fstvlInvite;
 			productName = IosWorkshopAr;
-			productReference = 14B73581276892D5007A7E73 /* fstvl invite.app */;
+			productReference = 14B73581276892D5007A7E73 /* Slamstox AR.app */;
 			productType = "com.apple.product-type.application";
 		};
 		14B73592276892D7007A7E73 /* fstvlInviteTests */ = {
@@ -405,9 +405,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = coenbreg.IosWorkshopAr;
-				PRODUCT_NAME = "fstvl invite";
+				PRODUCT_NAME = "Slamstox AR";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -437,9 +437,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = coenbreg.IosWorkshopAr;
-				PRODUCT_NAME = "fstvl invite";
+				PRODUCT_NAME = "Slamstox AR";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
