@@ -49,7 +49,7 @@ struct ARViewContainer: UIViewRepresentable {
     class Coordinator: NSObject, ARSessionDelegate {
         
         let arView:ARView!
-        var avPlayer: AVPlayer?
+        var avPlayer = AVPlayer()
         
         init(arView: ARView){
             self.arView = arView
@@ -59,9 +59,9 @@ struct ARViewContainer: UIViewRepresentable {
             for anchor in anchors {
                 if let imageAnchor = anchor as? ARImageAnchor {
                     if imageAnchor.isTracked{
-                        avPlayer?.play()
+                        avPlayer.play()
                     } else {
-                        avPlayer?.pause()
+                        avPlayer.pause()
                     }
                 }
             }
@@ -82,8 +82,10 @@ struct ARViewContainer: UIViewRepresentable {
                     }
                     
                     let playerItem = AVPlayerItem(url: videoUrl)
-                    let avPlayer = AVPlayer(playerItem: playerItem)
+                    avPlayer.replaceCurrentItem(with: playerItem)
                     let videoMaterial = VideoMaterial(avPlayer: avPlayer)
+                    
+                    avPlayer.automaticallyWaitsToMinimizeStalling = false
                     avPlayer.play()
                     
                     
