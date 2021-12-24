@@ -74,8 +74,8 @@ struct ARViewContainer: UIViewRepresentable {
 
                     let anchorEntity = AnchorEntity(anchor: imageAnchor)
 
-                    let width = Float(imageAnchor.referenceImage.physicalSize.width)
-                    let height = Float(imageAnchor.referenceImage.physicalSize.height)
+                    let width = Float(imageAnchor.referenceImage.physicalSize.width * 1.01)
+                    let height = Float(imageAnchor.referenceImage.physicalSize.height * 1.01)
 
                     guard let videoUrl = URL(string: "https://i399015.hera.fhict.nl/invite-video.mp4") else {
                         fatalError("Video not found")
