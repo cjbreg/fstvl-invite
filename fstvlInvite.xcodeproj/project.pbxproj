@@ -12,7 +12,6 @@
 		1498E0CD2775BAED00B3BDF2 /* InfoContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498E0CC2775BAED00B3BDF2 /* InfoContent.swift */; };
 		1498E0D02775BDD800B3BDF2 /* ARCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498E0CF2775BDD800B3BDF2 /* ARCameraView.swift */; };
 		1498E0D32775C29400B3BDF2 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498E0D22775C29400B3BDF2 /* NavigationButton.swift */; };
-		14B73587276892D5007A7E73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B73586276892D5007A7E73 /* ContentView.swift */; };
 		14B7358B276892D7007A7E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B7358A276892D7007A7E73 /* Assets.xcassets */; };
 		14B7358E276892D7007A7E73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B7358D276892D7007A7E73 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		1498E0CF2775BDD800B3BDF2 /* ARCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraView.swift; sourceTree = "<group>"; };
 		1498E0D22775C29400B3BDF2 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		14B73581276892D5007A7E73 /* Slamstox AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slamstox AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		14B73586276892D5007A7E73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14B7358A276892D7007A7E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B7358D276892D7007A7E73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14B73593276892D7007A7E73 /* fstvlInviteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fstvlInviteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +109,6 @@
 		14B73578276892D5007A7E73 = {
 			isa = PBXGroup;
 			children = (
-				1498E0C72775B70B00B3BDF2 /* SlamstoxARApp.swift */,
 				14B73583276892D5007A7E73 /* fstvlInvite */,
 				14B73582276892D5007A7E73 /* Products */,
 			);
@@ -130,8 +127,8 @@
 		14B73583276892D5007A7E73 /* fstvlInvite */ = {
 			isa = PBXGroup;
 			children = (
+				1498E0C72775B70B00B3BDF2 /* SlamstoxARApp.swift */,
 				1498E0C52775B6AD00B3BDF2 /* Views */,
-				14B73586276892D5007A7E73 /* ContentView.swift */,
 				14B7358A276892D7007A7E73 /* Assets.xcassets */,
 				14B7358C276892D7007A7E73 /* Preview Content */,
 			);
@@ -277,7 +274,6 @@
 			files = (
 				1498E0D32775C29400B3BDF2 /* NavigationButton.swift in Sources */,
 				1498E0CD2775BAED00B3BDF2 /* InfoContent.swift in Sources */,
-				14B73587276892D5007A7E73 /* ContentView.swift in Sources */,
 				1498E0D02775BDD800B3BDF2 /* ARCameraView.swift in Sources */,
 				1498E0CB2775B84000B3BDF2 /* HomeView.swift in Sources */,
 				1498E0C82775B70B00B3BDF2 /* SlamstoxARApp.swift in Sources */,
