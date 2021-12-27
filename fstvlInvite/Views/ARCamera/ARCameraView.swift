@@ -77,7 +77,7 @@ struct ARViewContainer: UIViewRepresentable {
                     let width = Float(imageAnchor.referenceImage.physicalSize.width * 1.05)
                     let height = Float(imageAnchor.referenceImage.physicalSize.height * 1.05)
 
-                    guard let videoUrl = URL(string: "https://i399015.hera.fhict.nl/invite-video.mp4") else {
+                    guard let videoUrl = URL(string: "https://player.vimeo.com/external/660384300.sd.mp4?s=7203de4108e97135762643da872af6f708670670&profile_id=165") else {
                         fatalError("Video not found")
                     }
 
