@@ -15,7 +15,7 @@ struct InfoContent: View {
                 .frame(width: 56, height: 56)
                 .foregroundColor(.yellow)
             
-            Text("We recommend scanning your invite card in a well lit enviorment ")
+            Text("We recommend scanning your invite card in a well lit environment ")
                 .multilineTextAlignment(.center)
             
         }
