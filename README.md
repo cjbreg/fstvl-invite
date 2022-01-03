@@ -5,7 +5,7 @@
 FSTVL Invite is an Augmented Reality appliction for iOS to function as an online invite for the Student Athlete FSTVL by [Slamstox](https://www.slamstox.com/)
 
 <p align="left">
-	<a href="https://itunes.apple.com/">
+	<a href="https://apps.apple.com/nl/app/slamstox-ar/id1601394581?l=en">
 		<img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-gb/appstore-lrg.svg"/>
 	</a>
 </p>
