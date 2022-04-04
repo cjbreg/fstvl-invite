@@ -19,4 +19,4 @@ FSTVL Invite is a creation from Coen Breg & Kim van der Meulen released under th
 ## Background
 
 This is a self-learning project.
-We are discovering Swift, the apple ecosystem and ARKit
+We are discovering Swift, the Apple developer ecosystem and ARKit
